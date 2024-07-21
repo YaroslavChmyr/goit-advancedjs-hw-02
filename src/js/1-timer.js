@@ -23,9 +23,12 @@ const options = {
     let currentDate = new Date();
     userSelectedDate = selectedDates[0];
     if (userSelectedDate <= currentDate) {
-        iziToast.show({
-            message: 'Please select date in the future'
-        });
+        iziToast.error({
+          id: 'error',
+          message: 'Please select date in the future',
+          position: 'topRight',
+          transitionIn: 'fadeInDown'
+      });
       document.querySelector('[data-start]').disabled = true;
     } else {
       document.querySelector('[data-start]').disabled = false;
