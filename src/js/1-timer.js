@@ -8,6 +8,8 @@ const datetimePicker = document.querySelector('#datetime-picker');
 let userSelectedDate;
 let timerInterval;
 
+document.querySelector('[data-start]').disabled = true;
+
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
